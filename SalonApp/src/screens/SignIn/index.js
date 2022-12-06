@@ -17,7 +17,6 @@ import {
 import Api from '../../Api';
 
 import SignInput from '../../components/SignInput';
-
 import BarberLogo from '../../assets/barber.svg';
 import EmailIcon from '../../assets/email.svg';
 import LockIcon from '../../assets/lock.svg';
@@ -32,6 +31,7 @@ export default () => {
   const handleSignClick = async () => {
     if (emailField != '' && passwordField != '') {
       let json = await Api.signIn(emailField, passwordField);
+
       if (json.token) {
         await AsyncStorage.setItem('token', json.token);
 
