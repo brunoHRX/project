@@ -5,7 +5,7 @@ import {Text} from 'react-native';
 export default () => {
   return (
     <Container>
-      <Text>Appointaments</Text>
+      <Text>Appointments</Text>
     </Container>
   );
 };
